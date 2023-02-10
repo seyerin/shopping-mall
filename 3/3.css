@@ -1,0 +1,246 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+body{
+  width: 100%;
+  height: 1200px;
+}
+header{
+  width: 100vw;
+  height: 10vh;
+  border-bottom: 3px solid rgb(246, 246, 246);
+  position: fixed;
+  z-index: 2;
+  background-color: white;
+}
+nav{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+a{
+  color: black;
+  text-decoration: none;
+}
+a:hover{
+  color: red;
+}
+ul{
+  list-style: none;
+}
+header li{
+  margin-right: 2.2vw;
+  float: left;
+}
+.logo{
+  font-size: 35px;
+  font-weight: 600;
+  position: relative;
+  left: 7vw;
+}
+.head_1{
+  position: relative;
+  right: 22.5vw;
+}
+.head_2{
+  position: relative;
+  right: 3.5vw;
+}
+/*-----------------------header 공통---------------------------------------*/
+main{
+  width: 100%;
+  height: 100%;
+  /* height 100하면 가로 스크롤 생김  1차 스크롤 발생 width %로 바꾸니까 해결 됨 vw는 세로 스크롤 넓이를 포함해서 가로 길이를 잡아서 가로 스크롤 생김 %는 세로 스크롤 넓이를 제외하고 가로 길이 설정*/
+  display: flex;
+  flex-direction: column;
+  align-items: center ;
+  position: relative;
+  top: 10.3vh;
+  background-color: rgb(77, 77, 121);
+}
+.banner_box{
+  margin: 0px;
+  width: 64vw;
+  height: 60vh;
+  overflow: hidden;
+  border-radius: 20px;
+  position: relative;
+  top: 4.5vh;
+}
+.banner_list{
+  display: flex;
+  transition: .5s ease-out;
+}
+.banner_box img{
+  width: 65vw;
+  height: 60vh;
+  border-radius: 20px;
+}
+/*--------------------------배너-------------------------*/
+.ad_box{
+  width: 100%;
+  height: 10vh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+  top: 8vh;
+}
+.ad{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.ad img{ 
+  margin: 0px 2vw 0 2vw;
+  width: 5vw;
+  border-radius: 15px;
+}
+.ad p{
+  text-align: center;
+  font-size: 13px;
+  font-weight: 500;
+}
+.ad_box_2{
+  width: 100%;
+  height: 50vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  top: 20vh;
+}
+.ad_box_2 h2{
+  font-size: 30px;
+  letter-spacing: -1px;
+}
+.ad_box_2 sub{
+  margin-top: 1.5vh;
+  color: #777777;
+  font-size: 17px;
+}
+.ad_2{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  top: 6vh;
+}
+.ad_2 img{
+  margin: 0 0.7vw 0 0.7vw;
+  width: 30vw;
+}
+.ad_2 p{
+  margin-left: 0.8vw;
+  font-size: 14px;
+  font-weight: 900;
+}
+.remove{
+  display: none;
+}
+/*-----------------------best item page-----------------------------*/
+.category_box{
+  width: 14vw;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  right: 23vw;
+  z-index: 1;
+  border-right: 3px solid rgb(246, 246, 246);
+  background-color: white ;
+}
+.category_box h3{
+  margin: 30px 0 20px 10px;
+}
+.category_best{
+  margin-left: 10px;
+  font-size: 17px;
+  font-weight: 900;
+}
+.category_best::after{
+  margin: 15px 0 15px 10px;
+  content: "";
+  display: block;
+  width: 12vw;
+  border-bottom: 3px solid rgb(246, 246, 246);
+}
+.category_box li::after{
+  margin: 15px 0 15px 10px;
+  content: "";
+  display: block;
+  width: 12vw;
+  border-bottom: 2px solid rgb(246, 246, 246);
+}
+.category_box li{
+  text-indent: 2.5vw;
+}
+.category_box li a{
+  color: #777777;
+  font-weight: 900;
+}
+.category_box li a:hover{
+  color: red;
+}
+/*--------------------카테고리 박스----------------*/
+.title_item2{
+  margin-bottom: 25px;
+  font-size: 40px;
+  position: relative;
+  top: 2vh;
+  left: 12.8vw;
+}
+.best_box{
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  top: 50px;
+}
+.item2{
+  width: 60%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  position: relative;
+  left: 200px;
+}
+.item2 img{ 
+  margin: 10px 15px 10px 15px;
+  width: 16vw;
+  height: 16vw;
+}
+.item2 p, .item2 sub{
+  margin: -10px 0 0 15px;
+}
+.item2 sub{
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 50px;
+}
+.brand_name{
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 30px;
+}
+.item_info{
+  font-size: 13px;
+  color: rgb(53, 53, 53);
+}
+.top_imgs{
+  margin-bottom: 20px;
+}
+.bottom_imgs{
+  margin-bottom: 20px;
+}
