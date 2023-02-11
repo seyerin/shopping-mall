@@ -59,7 +59,7 @@ main{
   align-items: center ;
   position: relative;
   top: 10.3vh;
-  background-color: rgb(77, 77, 121);
+  /* background-color: rgb(77, 77, 121); */
 }
 .banner_box{
   margin: 0px;
@@ -190,14 +190,14 @@ main{
   color: red;
 }
 /*--------------------카테고리 박스----------------*/
-.title_item2{
-  margin-bottom: 25px;
+.title_item{
+  margin-bottom: 7.5vh;
   font-size: 40px;
   position: relative;
   top: 2vh;
   left: 12.8vw;
 }
-.best_box{
+.main_box{
   width: 100%;
   height: 100vh;
   display: flex;
@@ -206,7 +206,7 @@ main{
   position: absolute;
   top: 50px;
 }
-.item2{
+.item{
   width: 60%;
   height: 100%;
   display: flex;
@@ -216,15 +216,15 @@ main{
   position: relative;
   left: 200px;
 }
-.item2 img{ 
+.item img{ 
   margin: 10px 15px 10px 15px;
   width: 16vw;
   height: 16vw;
 }
-.item2 p, .item2 sub{
+.item p, .item sub{
   margin: -10px 0 0 15px;
 }
-.item2 sub{
+.item sub{
   font-size: 17px;
   font-weight: 700;
   line-height: 50px;
@@ -238,9 +238,6 @@ main{
   font-size: 13px;
   color: rgb(53, 53, 53);
 }
-.top_imgs{
-  margin-bottom: 20px;
-}
-.bottom_imgs{
-  margin-bottom: 20px;
+.top_imgs, .middle_imgs, .bottom_imgs{
+  margin-bottom: 15px;
 }
