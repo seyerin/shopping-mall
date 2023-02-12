@@ -4,12 +4,12 @@ const REMOVE_CLASSNAME = "remove";
 const best_item = document.querySelector(".best_item");
 const title_best_item = document.querySelector(".title_best_item");
 
-const banner_box = document.querySelector('.banner_box');
-const banner_list = document.querySelector('.banner_list');
-const banners = document.querySelectorAll('.banner');
+const banner_box = document.querySelector(".banner_box");
+const banner_list = document.querySelector(".banner_list");
+const banners = document.querySelectorAll(".banner");
 let current_index = 0; 
 //-------------------------------------------------------------/
-category.addEventListener("click", remove_banner)
+category.addEventListener("click", remove_banner);
 
 function remove_banner (event){
   category_box.classList.remove(REMOVE_CLASSNAME);
@@ -67,3 +67,4 @@ const get_interval = () => {
 }
 
 let interval = get_interval(); 
+//-------------------------------------------------------------------------------

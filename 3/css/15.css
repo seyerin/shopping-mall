@@ -155,7 +155,12 @@ main{
   top: 5vh;
 }
 .number_price{
-  margin-right: 20px; 
+  margin-right: 20px;
+  font-size: 18px;
+  font-weight: 900;
+}
+span{
+  margin-right: 1vw;
   font-size: 18px;
   font-weight: 900;
 }
@@ -173,10 +178,6 @@ main{
 }
 .plus img{
   width: 1.58vw;
-}
-.product_number button{
-  border: none;
-  background-color: rgba(255, 255, 255, 0);
 }
 .purchase{
   width: 20vw;
@@ -211,3 +212,6 @@ main{
   background-color: #000;
 }
 
+.remove{
+  display: none;
+}
