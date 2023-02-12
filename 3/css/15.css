@@ -21,7 +21,7 @@
     color: black;
     text-decoration: none;
   }
-  a:hover{
+  header a:hover{
     color: red;
   }
   ul{

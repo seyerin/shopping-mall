@@ -25,7 +25,7 @@ a{
   color: black;
   text-decoration: none;
 }
-a:hover{
+header a:hover{
   color: red;
 }
 ul{
@@ -186,7 +186,7 @@ main{
   color: #777777;
   font-weight: 900;
 }
-.category_box li a:hover{
+.category_box a:hover{
   color: red;
 }
 /*--------------------카테고리 박스----------------*/
