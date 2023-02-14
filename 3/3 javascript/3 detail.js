@@ -10,9 +10,9 @@ plus_button.addEventListener("click", plus_number);
 function plus_number (event) {
   let n = Number(product_numbers.innerText);
   let p = Number(price.innerText.replaceAll(/(원|,)/g, ""));
-  const  OP = Number(origin_price.innerText.replaceAll(/(원|,)/g, ""));
+  const  ORIGIN_PRICE = Number(origin_price.innerText.replaceAll(/(원|,)/g, ""));
   //replace(바꿀 인자, 바꿀 값)--replace는 처음 발견한 하나만 바꾸기 때문에 보통 replaceAll을 씀 replaceAll은 전부 다 바꿈
-  let plus =  price.innerText = p + OP;
+  let plus =  price.innerText = p + ORIGIN_PRICE;
 
   price.innerText = plus.toLocaleString("ko-KR") + "원";
   whole_price.innerText = price.innerText; 
@@ -24,12 +24,12 @@ minus_button.addEventListener("click", minus_number);
 function minus_number (event) {
   let n = Number(product_numbers.innerText);
   let p = Number(price.innerText.replaceAll(/(원|,)/g, ""));
-  const  OP = Number(origin_price.innerText.replaceAll(/(원|,)/g, ""));
+  const  ORIGIN_PRICE = Number(origin_price.innerText.replaceAll(/(원|,)/g, ""));
   if(n >1 ) {
   product_numbers.innerText = n - 1;
   }
   if (n !== 1) {
-  let minus = price.innerText = p - OP ;
+  let minus = price.innerText = p - ORIGIN_PRICE ;
   price.innerText = minus.toLocaleString("ko-KR") + "원";
   whole_price.innerText = price.innerText; 
 }
