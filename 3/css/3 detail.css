@@ -169,6 +169,10 @@ span{
   display: flex;
   justify-content: space-around;
 }
+.product_number button{
+  border: none;
+  background-color: rgba(216, 112, 147, 0);
+}
 .product_number div p{
   margin-right: 3px;
   font-size: 20px;
