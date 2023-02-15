@@ -42,12 +42,19 @@ const heart = document.querySelector(".heart");
 const wish_heart = document.querySelector(".full_heart");
 const REMOVE = "remove";
 const WISH = "wish";
+const wish_box = document.querySelector(".wish_list");
+
 heart.addEventListener("click", on_wish_button);
 
 function on_wish_button (event) {
   heart.classList.add(REMOVE);
   wish_heart.classList.remove(REMOVE);
   wish_heart.classList.add(WISH);
+  let product_img = document.getElementsByClassName("product_img");
+  let product_price = document.getElementsByClassName("price");
+  let product_name = document.getElementsByClassName("product_name");
+  console.log(product_price);
+  document.body.appendChild(product_name);
 }
 
 wish_heart.addEventListener("click", off_wish_button);

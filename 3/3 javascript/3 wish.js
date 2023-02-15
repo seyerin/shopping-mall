@@ -1,0 +1,1 @@
+const wish_box = document.querySelector(".wish_list");
