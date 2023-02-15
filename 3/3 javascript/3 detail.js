@@ -5,6 +5,8 @@ let price = document.querySelector(".number_price");
 let whole_price = document.querySelector(".whole_price");
 const origin_price = document.querySelector(".price");
 
+//-------------------------------price-----------------------
+
 plus_button.addEventListener("click", plus_number);
 
 function plus_number (event) {
@@ -33,4 +35,43 @@ function minus_number (event) {
   price.innerText = minus.toLocaleString("ko-KR") + "원";
   whole_price.innerText = price.innerText; 
 }
+}
+
+//--------------------wish-----------------------------------
+const heart = document.querySelector(".heart");
+const wish_heart = document.querySelector(".full_heart");
+const REMOVE = "remove";
+const WISH = "wish";
+heart.addEventListener("click", on_wish_button);
+
+function on_wish_button (event) {
+  heart.classList.add(REMOVE);
+  wish_heart.classList.remove(REMOVE);
+  wish_heart.classList.add(WISH);
+}
+
+wish_heart.addEventListener("click", off_wish_button);
+
+function off_wish_button (event) {
+  heart.classList.remove(REMOVE);
+  wish_heart.classList.remove(WISH);
+  wish_heart.classList.add(REMOVE);
+}
+
+//-----------------------link copy----------------------
+const copy_button = document.querySelector(".share");
+
+copy_button.addEventListener("click", copy);
+
+function copy (event) {
+  let url = "";
+  let text_area = document.createElement("textarea");
+
+  document.body.appendChild(text_area);
+  url = window.document.location.href;
+  text_area.value = url;
+  text_area.select();
+  document.execCommand("copy");
+  document.body.removeChild(text_area);
+  alert("URL이 복사 되었습니다");
 }

@@ -46,6 +46,10 @@
     right: 3.5vw;
   }
 /*------------------------header-------------------------*/
+.remove{
+  display: none;
+}
+
 main{
   width: 100%;
   height: 70vh;
@@ -108,7 +112,11 @@ main{
 }
 .heart{
   margin-right: 2vw;
-  width: 1.3vw;
+  width: 1.4vw;
+}
+.wish {
+  margin-right: 2vw;
+  width: 1.4vw;
 }
 .product_name{
   margin: 10px 0 10px 0;
@@ -216,6 +224,3 @@ span{
   background-color: #000;
 }
 
-.remove{
-  display: none;
-}
