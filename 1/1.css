@@ -1,0 +1,260 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+.hidden{
+  display: none;
+  /*visibility: hidden; 과 display: none;의 차이점 
+    visibility는 잡아둔 공간은 그대로 두고 개체만 사라지는거고 display는 잡아둔 공간과 함꼐 사라짐*/  
+}
+body{
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: whitesmoke;
+}
+#weather{
+  margin: 10px 0 -10px 0;
+  padding: 5px 5px 5px 5ox;
+  font-size: 23px;
+  text-shadow: 0 5px 5px black;
+}
+.box{
+  width: 30vw;
+  height: 50vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  top: 30vh;
+}
+.login-form{
+  height: 15vh;
+  display: flex;
+  align-items: center;
+}
+.name{
+  margin-right: 10px;
+  width: 20vw;
+  height: 10vh;
+  font-size: 25px;
+}  
+.login-button{
+  width: 9vw;
+  height: 7vh;
+  font-size: 20px;
+}
+.login-button, .name{
+  padding: 5px 5px 5px 5px;
+  text-align: center;
+  border: none;
+  border-radius: 50px;
+  box-shadow: 0 5px 5px black;
+  background-color: whitesmoke;
+}
+#greeting{
+  width: 50vw;
+  height: 10vh;
+  font-size: 40px;
+  text-align: center;
+  text-shadow: 0px 5px 5px black;
+}
+#clock{
+  width: 50vw;
+  height: 15vh;
+  font-size: 80px;
+  text-align: center;
+  text-shadow: 0px 5px 5px black;
+}
+#todo{
+  margin-top: 15px; 
+}
+#todo input{ 
+  padding: 5px 5px 5px 5px;
+  width: 17vw;
+  height: 5vh;
+  font-size: 17px;
+  text-align: center;
+  border: none;
+  border-radius: 50px;
+  box-shadow: 0 5px 5px black;
+}
+.list-box{
+  width: 95vw;
+  height: 45vh;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  position: relative;
+  bottom: 20px;
+  overflow-y: scroll;
+}
+.list-box::-webkit-scrollbar{
+  width: 6px;
+}
+.list-box::-webkit-scrollbar-track{
+  background: rgba(0, 0, 0, 0.33);
+}
+.list-box::-webkit-scrollbar-thumb{
+  background: whitesmoke;
+  border-radius: 50px;
+}
+li{
+  margin-bottom: 10px;
+  padding: 5px 5px 5px 5px;
+  width: 15vw;
+  position: relative;
+  text-align: center;
+  list-style: none;
+  border-radius: 30px;
+  background-color: rgba(0, 0, 0, 0.73);
+}
+.list-box button{
+  position: absolute;
+  right: 15px;
+  border: none;
+  background: none;
+}
+#quote{
+  width: 50vw;
+  height: 10vh;
+  font-size: 20px;
+  text-align: center;
+  text-shadow: 0px 5px 3px black;
+  position: relative;
+  bottom: 10vh;
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .box{
+    width: 50vw;
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+  position: relative;
+  top: 5vh;
+  }
+  #weather{
+    margin-bottom: -35px;
+    font-size: 30px;
+  }
+  #clock{
+    width: 50vw;
+    height: 13vh;
+    position: relative;
+    top: 20px;
+    font-size: 100px;
+  }
+  .name{
+    width: 40vw;
+    height: 6vh;
+  }
+  .login-button{
+    width: 25vw;
+    height: 6vh;
+  }
+  #greeting{
+    width: 50vw;
+    height: 8vh;
+    text-align: center;
+  }
+  .list-box{
+    margin-top: -25px;
+    width: 40vw;
+    height: 25vh;
+  }
+  li{
+    width: 37vw;
+    height: 3vh;
+  }
+  #todo input{
+    margin-top: -30px;
+    width: 50vw;
+    height: 5vh;
+    font-size: 20px;
+  }
+  #quote{
+    width: 80vw;
+    height: 5vh;
+    font-size: 20px;
+    line-height: 30px;
+    position: relative;
+    top: 1vh;
+  }
+}
+@media only screen and (max-width: 400px) {
+  .box{
+  width: 50vw;
+  height: 30vh;
+  display: flex;
+  justify-content: center;
+position: relative;
+top: 8vh;
+}
+#weather{
+  font-size: 20px;
+}
+#clock, #weather{
+  position: relative;
+  right: 55px;
+  bottom: 130px;
+}
+#clock{
+  width: 65vw;
+  height: 7vh;
+  font-size: 50px;
+  text-align: center;
+}
+#greeting, #todo, .login-form{
+  position: relative;
+  bottom: 50px;
+}
+.name{
+  width: 40vw;
+  height: 4vh;
+  font-size: 15px;
+}
+.login-button{
+  width: 25vw;
+  height: 4vh;
+  font-size: 15px;
+}
+#greeting{
+  margin-bottom: 10px;
+  width: 70vw;
+  height: 5vh;
+  font-size: 30px;
+  text-align: center;
+}
+.list-box{
+  width: 55vw;
+  height: 20vh;
+  position: relative;
+  top: 25px;
+  font-size: 17px;
+}
+li{
+  width: 50vw;
+  height: 2vh;
+  line-height: 2vh;
+}
+#todo input{
+  width: 60vw;
+  height: 4vh;
+  font-size: 15px;
+}
+#quote{
+  width: 80vw;
+  height: 10vh;
+  font-size: 15px;
+  line-height: 20px;
+  position: relative;
+  top: 100px;
+}
+}
