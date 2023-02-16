@@ -50,11 +50,16 @@ function on_wish_button (event) {
   heart.classList.add(REMOVE);
   wish_heart.classList.remove(REMOVE);
   wish_heart.classList.add(WISH);
-  let product_img = document.getElementsByClassName("product_img");
-  let product_price = document.getElementsByClassName("price");
-  let product_name = document.getElementsByClassName("product_name");
-  console.log(product_price);
-  document.body.appendChild(product_name);
+  let product_price = document.querySelector(".price");
+  let product_name = document.querySelector(".product_name");
+  let product_img = document.querySelector(".product_img");
+  console.log(product_name);
+
+  
+  localStorage.setItem("product_name", product_name.innerText);
+  localStorage.setItem("product_price", product_price.innerText);
+  localStorage.setItem("product_img", product_img);
+
 }
 
 wish_heart.addEventListener("click", off_wish_button);
