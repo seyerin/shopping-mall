@@ -7,8 +7,8 @@ header{
   height: 10vh;
   border-bottom: 3px solid rgb(246, 246, 246);
   position: fixed;
-  z-index: 2;
   background-color: white;
+  z-index: 3;
 }
 body{
   width: 100%;
@@ -65,44 +65,95 @@ main{
   display: flex;
   justify-content: center;
   position: relative;
-  background-color: rgb(93, 0, 0);
+  background-color: white;
 }
 form{
   width: 30%;
-  height: 100%;
+  height: 60%;
   display: flex;
   justify-content: center;
   position: relative;
-  background-color: aqua;
+  top: 10vh;
 }
 .form_box{
   width: 100%;
-  height: 100%;
+  height: 80%;
   display: flex;
   flex-direction: column;
   position: relative;
-  top: 6vh;
 }
 .title{
-  margin-bottom: 4vh;
+  margin-bottom: 7vh;
   width: 100%;
-  font-size: 20px;
+  font-size: 19px;
   display: flex;
   justify-content: center;
 }
 .form_box p{
   color:  #777777;
-  font-size: 13px;
+  font-size: 12px;
   letter-spacing: -1.5px;
   position: relative; 
+  bottom: 0.5vh;
 }
 .id, .password{
-  margin: 1vh 0 4vh 0 ;
+  margin: 1vh 0 3vh 0 ;
   width: 99%;
-  height: 6%;
+  height: 8%;
   border: none;
   border-bottom: 2px solid rgb(246, 246, 246);
   background-color: rgba(0, 0, 128, 0);
 }
-
-
+.login_helper{
+  margin-bottom: 1.5vh;
+  width: 100%;
+  height: 5vh;
+  font-size: 12px;
+  line-height: 5vh;
+  letter-spacing: -1px;
+  word-spacing: 5px;
+}
+input[type="checkbox"]{
+  width: 20px;
+  height: 20px;
+  border-radius: 100%;
+  border: 1px solid rgb(246, 246, 246);
+  position: relative;
+  top: 0.8vh;
+  right: 0;
+  appearance: none;
+  z-index: 2;
+}
+input[type="checkbox"]:checked + label::before{
+  width: 2.5vh;
+  height: 2.5vh;
+  content: "\2713";
+  color: white;
+  font-size: 0.5vw;
+  font-weight: 900;
+  text-align: center;
+  line-height: 2.5vh;
+  border-radius: 100%;
+  position: fixed;
+  left: 38.08vw;
+  top: 51.3vh;
+  background: red;
+  z-index: 1;
+}
+.find_login{
+  margin-left: 12vh;
+  display: inline;
+  font-weight: 900;
+}
+.find_login a{
+  color: #777777;
+}
+.login_button{
+  width: 100%;
+  height: 10vh;
+  color: white;
+  border: 1px solid rgb(192, 192, 192);
+  position: relative;
+  top: 1.5vh;
+  background-color: rgb(192, 192, 192);
+}

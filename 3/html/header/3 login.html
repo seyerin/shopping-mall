@@ -41,9 +41,13 @@
             <p>비밀번호</p>
             <input type="password" class="password">
             <div class="login_helper">
-              <input type="checkbox" class="save_id"><label>아이디 저장하기</label>
-              <a href="" class="find_login">아이디 찾기</a>
-              <a href="" class="find_login">비밀번호 찾기</a>
+              <input type="checkbox" id="save_id">
+              <label for="save_id"></label>
+              <label>로그인 유지하기</label>
+              <div class="find_login">
+                <a href="">아이디 찾기</a>
+                <a href="">비밀번호 찾기</a>
+              </div>
             </div>
             <input type="submit" class="login_button none_value" value="로그인">
           </form>
