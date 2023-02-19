@@ -10,28 +10,35 @@ const SAVEUSERPW = "saveUserPw";
 const userName = localStorage.getItem(SAVEUSERNAME);
 const userId = localStorage.getItem(SAVEUSERID);
 const userPw = localStorage.getItem(SAVEUSERPW);
+const same = document.querySelector(".same");
 
-
-const a = document.querySelector(".aa");
-
-localStorage.setItem("aaa", a.innerHTML);
-
-if(userName === null && userId === null && userPw === null) {
-  localStorage.setItem(SAVEUSERNAME, loginUserName.value);
-  loginForm.addEventListener("submit", saveLogin); //submit으로 하면 안됨?? 왜 안됨??
-  savePw();
-} else {
-  alert("이미 있는 회원입니다.")
+if (userName == null) {
+  joinMembership();
+} 
+else if (userId === loginId.value){
+  loginForm.addEventListener("keypress", available);
 }
 
-function saveId (event) {
-  localStorage.setItem(SAVEUSERID, loginId.value);
+function available (event) {
+  alert("이미 가입된 회원입니다.")
+
 }
 
-function savePw (event) {
-  if(reconfirmPw.value === loginPw.value) {
-    localStorage.setItem(SAVEUSERPW, loginPw.value);
+function joinMembership(){
+  if(loginPw.value != reconfirmPw.value) {
+    same.innerHTML = "비밀번호가 일치하지 않습니다";
+    same.style.color = "red";
   } else {
-    alert("비밀번호가 다릅니다.")
+    same.innerHTML = "비밀번호가 일치합니다.";
+    same.style.color = "blue";
+    loginForm.addEventListener("submit", saveLogin);
   }
+}
+loginPw.onchange = joinMembership;
+reconfirmPw.onkeyup = joinMembership;
+
+function saveLogin (event) {
+  localStorage.setItem(SAVEUSERNAME, loginUserName.value);
+  localStorage.setItem(SAVEUSERID, loginId.value);
+  localStorage.setItem(SAVEUSERPW, loginPw.value);
 }
