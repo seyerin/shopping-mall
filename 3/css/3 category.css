@@ -41,11 +41,11 @@ header li{
   position: relative;
   left: 7vw;
 }
-.head_1{
+.head-1{
   position: relative;
   right: 22.5vw;
 }
-.head_2{
+.head-2{
   position: relative;
   right: 3.5vw;
 }
@@ -59,7 +59,7 @@ main{
   position: relative;
   top: 10.3vh;
 }
-.category_box{
+.category-box{
   width: 14vw;
   height: 100%;
   display: flex;
@@ -70,47 +70,47 @@ main{
   border-right: 3px solid rgb(246, 246, 246);
   background-color: white;
 }
-.category_box h3{
+.category-box h3{
   margin: 30px 0 20px 10px;
 }
-.category_best{
+.category-best{
   margin-left: 10px;
   font-size: 17px;
   font-weight: 900;
 }
-.category_best::after{
+.category-best::after{
   margin: 15px 0 15px 10px;
   content: "";
   display: block;
   width: 12vw;
   border-bottom: 3px solid rgb(246, 246, 246);
 }
-.category_box li::after{
+.category-box li::after{
   margin: 15px 0 15px 10px;
   content: "";
   display: block;
   width: 12vw;
   border-bottom: 2px solid rgb(246, 246, 246);
 }
-.category_box li{
+.category-box li{
   text-indent: 2.5vw;
 }
-.category_box li a{
+.category-box li a{
   color: #777777;
   font-weight: 900;
 }
-.category_box a:hover{
+.category-box a:hover{
   color: red;
 }
 /*--------------------카테고리 박스----------------*/
-.title_item{
+.title-item{
   margin-bottom: 7.5vh;
   font-size: 40px;
   position: relative;
   top: 2vh;
   left: 12.8vw;
 }
-.main_box{
+.main-box{
   width: 100%;
   height: 100vh;
   display: flex;
@@ -142,16 +142,16 @@ main{
   font-weight: 700;
   line-height: 50px;
 }
-.brand_name{
+.brand-name{
   font-size: 13px;
   font-weight: 700;
   line-height: 30px;
 }
-.item_info{
+.item-info{
   font-size: 13px;
   color: rgb(53, 53, 53);
 }
-.top_imgs, .middle_imgs, .bottom_imgs{
+.top-imgs, .middle-imgs, .bottom-imgs{
   margin-bottom: 15px;
 }
 /*-----------------------------카테고리-----------------*/

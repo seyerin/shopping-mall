@@ -1,17 +1,17 @@
-let names = localStorage.getItem("product_name");
-let price = localStorage.getItem("product_price");
-let img = localStorage.getItem("product_img");
+let names = localStorage.getItem("product-name");
+let price = localStorage.getItem("product-price");
+let img = localStorage.getItem("product-img");
 
 
 
-let price_element = document.createElement("p");
-let price_text = document.createTextNode(price);
-let name_element = document.createElement("sub");
-let name_text = document.createTextNode(names);
+let priceElement = document.createElement("p");
+let priceText = document.createTextNode(price);
+let nameElement = document.createElement("sub");
+let nameText = document.createTextNode(names);
 
 
-price_element.appendChild(price_text);
-document.body.appendChild(price_element);
+priceElement.appendChild(priceText);
+document.body.appendChild(priceElement);
 
-name_element.appendChild(name_text);
-document.body.appendChild(name_element);
+nameElement.appendChild(nameText);
+document.body.appendChild(nameElement);

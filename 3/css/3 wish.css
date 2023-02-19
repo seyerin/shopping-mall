@@ -41,16 +41,16 @@ header li{
   position: relative;
   left: 7vw;
 }
-.head_1{
+.head-1{
   position: relative;
   right: 22.5vw;
 }
-.head_2{
+.head-2{
   position: relative;
   right: 3.5vw;
 }
 /*-----------------------header 공통---------------------------------------*/
-.wish_list{
+.wish-list{
   margin: 10vw 0 0 10vw;
 }
 img{

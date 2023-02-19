@@ -1,67 +1,67 @@
-const banner_box = document.querySelector(".banner_box");
-const banner_list = document.querySelector(".banner_list");
+const bannerBox = document.querySelector(".banner-box");
+const bannerList = document.querySelector(".banner-list");
 const banners = document.querySelectorAll(".banner");
-let current_index = 0; 
+let currentIndex = 0; 
 
 const category = document.querySelector(".category");
-const category_box = document.querySelector(".category_box");
-const REMOVE_CLASSNAME = "remove";
+const categoryBox = document.querySelector(".category-box");
+const REMOVECLASSNAME = "remove";
 
-category.addEventListener("click", remove_banner);
+category.addEventListener("click", removeBanner);
 
-function remove_banner (event){
-  banner_box.classList.add(REMOVE_CLASSNAME);
+function removeBanner (event){
+  bannerBox.classList.add(REMOVECLASSNAME);
 }
 
 //----------------------------------------------------------------/
 banners.forEach((banner) => {
-  banner.style.width = `${banner_box.clientWidth}px`; 
+  banner.style.width = `${bannerBox.clientWidth}px`; 
 })
 
-banner_list.style.width = `${banner_box.clientWidth * banners.length}px`;
+bannerList.style.width = `${bannerBox.clientWidth * banners.length}px`;
 
 const buttonLeft = document.querySelector('.button-left');
 const buttonRight = document.querySelector('.button-right');
 
 buttonLeft.addEventListener('click', () => {
-  current_index--;
-  //current_index = (current_index < 0) ? 0 : current_index;
-  if(current_index < 0) {
-    current_index = 0;
+  currentIndex--;
+  //current-index = (current-index < 0) ? 0 : current-index;
+  if(currentIndex < 0) {
+    currentIndex = 0;
   } 
   else {
-    current_index = current_index;
+    currentIndex = currentIndex;
   }
   
-  banner_list.style.marginLeft = `-${banner_box.clientWidth * current_index}px`;
+  bannerList.style.marginLeft = `-${bannerBox.clientWidth * currentIndex}px`;
   clearInterval(interval); 
-  interval = get_interval(); 
+  interval = getInterval(); 
 });
 
 buttonRight.addEventListener('click', () => {
-  current_index++;
-  current_index = current_index >= banners.length ? banners.length - 1 : current_index; 
-  banner_list.style.marginLeft = `-${banner_box.clientWidth * current_index}px`;
+  currentIndex++;
+  currentIndex = currentIndex >= banners.length ? banners.length - 1 : currentIndex; 
+  bannerList.style.marginLeft = `-${bannerBox.clientWidth * currentIndex}px`;
   clearInterval(interval); 
-  interval = get_interval(); 
+  interval = getInterval(); 
 });
 
 
-const get_interval = () => {
+const getInterval = () => {
   return setInterval(() => {
-    current_index++;
-      current_index = current_index >= banners.length ? 0 : current_index;
-      banner_list.style.marginLeft = `-${banner_box.clientWidth * current_index}px`;
+    currentIndex++;
+      currentIndex = currentIndex >= banners.length ? 0 : currentIndex;
+      bannerList.style.marginLeft = `-${bannerBox.clientWidth * currentIndex}px`;
 }, 3000);
   
   function rotation() {
-    current_index++;
-    current_index = current_index >= banners.length ? 0 : current_index;
-    banner_list.style.marginLeft = `-${banner_box.clientWidth * current_index}px`;
+    currentIndex++;
+    currentIndex = currentIndex >= banners.length ? 0 : currentIndex;
+    bannerList.style.marginLeft = `-${bannerBox.clientWidth * currentIndex}px`;
   }
   return setInterval(rotation, 4000);
 }
 
-let interval = get_interval(); 
+let interval = getInterval(); 
 //-------------------------------------------------------------------------------
 

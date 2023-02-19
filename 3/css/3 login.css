@@ -41,11 +41,11 @@ header li{
   position: relative;
   left: 7vw;
 }
-.head_1{
+.head-1{
   position: relative;
   right: 22.5vw;
 }
-.head_2{
+.head-2{
   position: relative;
   right: 3.5vw;
 }
@@ -75,7 +75,7 @@ form{
   position: relative;
   top: 10vh;
 }
-.form_box{
+.form-box{
   width: 100%;
   height: 80%;
   display: flex;
@@ -89,7 +89,7 @@ form{
   display: flex;
   justify-content: center;
 }
-.form_box p{
+.form-box p{
   color:  #777777;
   font-size: 12px;
   letter-spacing: -1.5px;
@@ -104,7 +104,7 @@ form{
   border-bottom: 2px solid rgb(246, 246, 246);
   background-color: rgba(0, 0, 128, 0);
 }
-.login_helper{
+.login-helper{
   margin-bottom: 1.5vh;
   width: 100%;
   height: 5vh;
@@ -117,7 +117,7 @@ input[type="checkbox"]{
   width: 20px;
   height: 20px;
   border-radius: 100%;
-  border: 1px solid rgb(246, 246, 246);
+  border: 1.5px solid rgb(210, 210, 210);
   position: relative;
   top: 0.8vh;
   right: 0;
@@ -135,20 +135,20 @@ input[type="checkbox"]:checked + label::before{
   line-height: 2.5vh;
   border-radius: 100%;
   position: fixed;
-  left: 38.08vw;
-  top: 51.3vh;
+  left: 38.09vw;
+  top: 51.5vh;
   background: red;
   z-index: 1;
 }
-.find_login{
+.find-login{
   margin-left: 12vh;
   display: inline;
   font-weight: 900;
 }
-.find_login a{
+.find-login a{
   color: #777777;
 }
-.login_button{
+.none-value{
   width: 100%;
   height: 10vh;
   color: white;
@@ -156,4 +156,13 @@ input[type="checkbox"]:checked + label::before{
   position: relative;
   top: 1.5vh;
   background-color: rgb(192, 192, 192);
+}
+.login-button{
+  width: 100%;
+  height: 10vh;
+  color: white;
+  border: 1px solid red;
+  position: relative;
+  top: 1.5vh;
+  background-color: #ff0000;
 }

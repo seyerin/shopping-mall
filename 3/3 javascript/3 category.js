@@ -1,12 +1,12 @@
 const category = document.querySelector(".category");
-const category_box = document.querySelector(".category_box");
-const REMOVE_CLASSNAME = "remove";
-const best_item = document.querySelector(".best_item");
-const title_best_item = document.querySelector(".title_best_item");
+const categoryBox = document.querySelector(".category-box");
+const REMOVECLASSNAME = "remove";
+const bestItem = document.querySelector(".best-item");
+const titleBestItem = document.querySelector(".title-best-item");
 
 
-category.addEventListener("click", remove_banner);
+category.addEventListener("click", removeBanner);
 
-function remove_banner (event){
-  banner_box.classList.add(REMOVE_CLASSNAME);
+function removeBanner (event){
+  bannerBox.classList.add(REMOVE-CLASSNAME);
 }
