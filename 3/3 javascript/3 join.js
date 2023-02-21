@@ -12,13 +12,19 @@ const userId = localStorage.getItem(SAVEUSERID);
 const userPw = localStorage.getItem(SAVEUSERPW);
 const same = document.querySelector(".same");
 
-if (userName == null) {
-  joinMembership();
-} 
-else if (userId === loginId.value){
-  loginForm.addEventListener("keypress", available);
-}
+document.addEventListener("keydown", eneterEvent);
 
+function eneterEvent (event) {
+if (event.keyCode === 13) {
+  event.preventDefault();
+}
+  if (userName !== null) {
+  
+} 
+else {
+  joinMembership();
+}
+}
 function available (event) {
   alert("이미 가입된 회원입니다.")
 

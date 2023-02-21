@@ -136,7 +136,7 @@ input[type="checkbox"]:checked + label::before{
   border-radius: 100%;
   position: fixed;
   left: 38.09vw;
-  top: 51.5vh;
+  top: 51.4vh;
   background: red;
   z-index: 1;
 }
@@ -157,12 +157,45 @@ input[type="checkbox"]:checked + label::before{
   top: 1.5vh;
   background-color: rgb(192, 192, 192);
 }
+.button-box{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 .login-button{
   width: 100%;
-  height: 10vh;
+  height: 7vh;
   color: white;
-  border: 1px solid red;
+  font-size: 13px;
+  font-weight: 900;
+  border: 1.5px solid red;
   position: relative;
   top: 1.5vh;
   background-color: #ff0000;
+}
+.button-box p {
+  color: rgb(161, 161, 161);
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: -1.5px;
+  position: relative;
+  top: 4vh;
+}
+.join{
+  width: 99.5%;
+  height: 7vh;
+  font-size: 12px;
+  text-align: center;
+  line-height: 7vh;
+  font-weight: 900;
+  border: 1.5px solid #b6b6b6c5;
+  position: relative;
+  top: 7vh;
+  z-index: 1;
+  background-color: #ffffff;
+}
+.join button {
+  border: none;
+  background-color: #ff000000;
 }
