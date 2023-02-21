@@ -7,7 +7,7 @@ const originPrice = document.querySelector(".price");
 
 //-------------------------------price-----------------------
 
-plus-button.addEventListener("click", plus-number);
+plusButton.addEventListener("click", plusNumber);
 
 function plusNumber (event) {
   let n = Number(productNumbers.innerText);
@@ -21,7 +21,7 @@ function plusNumber (event) {
   productNumbers.innerText = n + 1;
 }
 // 가장 위에 있는 절 대 바뀌지 않을 price 클래스를 가진 요소를 const로 변수 선언하고 그를 이용해 상품 수량별 가격을 더하고 뺌
-minus-button.addEventListener("click", minus-number);
+minusButton.addEventListener("click", minusNumber);
 
 function minusNumber (event) {
   let n = Number(productNumbers.innerText);
@@ -73,7 +73,7 @@ function offWishButton (event) {
 //-----------------------link copy----------------------
 const copyButton = document.querySelector(".share");
 
-copy-button.addEventListener("click", copy);
+copyButton.addEventListener("click", copy);
 
 function copy (event) {
   let url = "";
