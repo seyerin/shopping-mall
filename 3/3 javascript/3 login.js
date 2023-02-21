@@ -2,19 +2,40 @@ const loginForm = document.querySelector("form");
 const loginId = loginForm.querySelector(".id");
 const loginPw = loginForm.querySelector(".password");
 const loginBtn = loginForm.querySelector(".login-button");
-const SAVEUSERID = "saveUserId";
-const SAVEUSERPW = "saveUserPw";
-const userId = localStorage.getItem(SAVEUSERID);
-const userPw = localStorage.getItem(SAVEUSERPW);
+const saveUserId = "saveUserId";
+const saveUserpw = "saveUserPw";
+const userId = localStorage.getItem(saveUserId);
+const userPw = localStorage.getItem(saveUserpw);
 
-if(userId === null) {
-  loginForm.addEventListener("submit", saveLogin); //submit으로 하면 안됨?? 왜 안됨??
+document.addEventListener("keydown", eneterEvent);
+
+function eneterEvent (event) {
+  if (event.keyCode === 13) {
+    event.preventDefault();
+  }
+  console.log(userId == loginId.value);
+  console.log(userPw == loginPw.value);
+}
+  loginBtn.addEventListener("click", checkUserMembership);
+  
+  function checkUserMembership (event) {
+  if (userId === loginId.value) {
+    if(userPw === loginPw.value) {
+    success();
+  }
+}
+else{
+  fail();
+  loginId.value = null;
+  loginPw.value = null;
+}
 }
 
-function saveLogin (event) {
-  localStorage.setItem(SAVEUSERID, loginId.value);
-  localStorage.setItem(SAVEUSERPW, loginPw.value);
-  const aa = document.createElement("p");
-  aa.appendChild(userId);
-  document.body.appendChild(aa);
+function success (event) {
+  location.href = "/3/html/main/index.html";
 }
+
+function fail (event) {
+  alert("아이디 또는 비밀번호를 잘못 입력했습니다.");
+}
+////

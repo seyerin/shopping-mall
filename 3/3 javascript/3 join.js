@@ -18,26 +18,31 @@ function eneterEvent (event) {
 if (event.keyCode === 13) {
   event.preventDefault();
 }
-  if (userName !== null) {
-  
+  if (loginId.value === userId) {
+    available();
+    loginId.value = null;
+    loginPw.value = null;
 } 
 else {
   joinMembership();
 }
 }
 function available (event) {
-  alert("이미 가입된 회원입니다.")
+  alert("이미 가입된 회원입니다.");
+  
 
 }
 
 function joinMembership(){
-  if(loginPw.value != reconfirmPw.value) {
-    same.innerHTML = "비밀번호가 일치하지 않습니다";
-    same.style.color = "red";
-  } else {
+  if(loginPw.value === reconfirmPw.value) {
     same.innerHTML = "비밀번호가 일치합니다.";
     same.style.color = "blue";
+    loginBtn.disabled = false;
+  } else {
     loginForm.addEventListener("submit", saveLogin);
+    same.innerHTML = "비밀번호가 일치하지 않습니다";
+    same.style.color = "red";
+    loginBtn.disabled = true;
   }
 }
 loginPw.onchange = joinMembership;
