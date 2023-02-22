@@ -4,17 +4,54 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/3/css/3 join.css">
   <title>Document</title>
 </head>
 <body>
-  <form action="">
-    <input class="name" type="text" placeholder="name" required>
-    <input class="id" type="text" placeholder="id" >
-    <input class="pw" type="password" placeholder="pw" required>
-    <input class="re-pw" type="text" placeholder="pw2" required>
-    <p class="same"></p>
-    <a href="/3/html/header/3 login.html"><input class="btn" type="submit" value="login" required></a>
-  </form>
+  <header>
+    <nav>
+        <a class="logo" href="/3/html/main/index.html">BIBI</a>
+        <div class="head-1">
+        <ul>
+          <li class="category"><a href="/3/html/main/3 best_item.html">카테고리</a></li>
+        </ul>
+      </div>
+      <div class="head-2">
+        <ul>
+          <li class="login"><a href="/3/html/header/3 login.html">로그인</a></li>
+          <li class="my"><a href="">마이 페이지</a></li>
+          <li class="cart">
+            <a href="">
+              <i class="fa-solid fa-cart-shopping"></i>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header> 
+  <main>
+    <div class="whole">
+      <form action="">
+        <div class="form-box">
+          <div class="title">  
+            <h2>회원가입</h2>
+          </div>
+          <p>이름</p>
+          <input class="name" type="text"  required>
+          <p>아이디</p>
+          <input class="id" type="text" required>
+          <p>비밀번호</p>
+          <input class="pw" type="password" required>
+          <p>비밀번호 확인</p>
+          <input class="re-pw" type="text" required>
+            <div class="text-btn">
+              <p class="same"></p>
+              <a href="/3/html/header/3 login.html"><input class="btn" type="submit" value="login" required></a>
+            </div>
+        </form> 
+      </div>
+    </div>
+  </main>
   <script src="/3/3 javascript/3 join.js"></script>
 </body>
 </html>

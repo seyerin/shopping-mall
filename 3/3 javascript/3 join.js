@@ -24,14 +24,19 @@ if (event.keyCode === 13) {
     loginPw.value = null;
 } 
 else {
-  joinMembership();
+  loginPw.addEventListener("focus", joinMembership);
+
 }
 }
 function available (event) {
   alert("이미 가입된 회원입니다.");
-  
-
+  same.innerText = "이미 가입한 아이디입니다."
+//  loginUserName.required = false; 인풋 속성 접근은 걍 엘리먼트.속성이름 = 트루/펄스;
+//  loginId.required = false;
+//  loginPw.required = false;
+//  reconfirmPw.required = false;
 }
+
 
 function joinMembership(){
   if(loginPw.value === reconfirmPw.value) {

@@ -24,6 +24,10 @@ function eneterEvent (event) {
     success();
   }
 }
+else if (userId === null) {
+  alert("없는 회원입니다.");
+  location.href = "/3/html/header/3 join.html";
+}
 else{
   fail();
   loginId.value = null;
@@ -38,4 +42,3 @@ function success (event) {
 function fail (event) {
   alert("아이디 또는 비밀번호를 잘못 입력했습니다.");
 }
-////

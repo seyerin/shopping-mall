@@ -1,0 +1,119 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+header{
+  width: 100vw;
+  height: 10vh;
+  border-bottom: 3px solid rgb(246, 246, 246);
+  position: fixed;
+  background-color: white;
+  z-index: 3;
+}
+body{
+  width: 100%;
+  height: 100vh;
+}
+nav{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+a{
+  color: black;
+  text-decoration: none;
+}
+header a:hover{
+  color: red;
+}
+ul{
+  list-style: none;
+}
+header li{
+  margin-right: 2.2vw;
+  float: left;
+}
+.logo{
+  font-size: 35px;
+  font-weight: 600;
+  position: relative;
+  left: 7vw;
+}
+.head-1{
+  position: relative;
+  right: 22.5vw;
+}
+.head-2{
+  position: relative;
+  right: 3.5vw;
+}
+/*-----------------------header 공통---------------------------------------*/
+main{
+  width: 100%;
+  height: 89.7%;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  top: 10.3vh;
+  background-color: rgb(246, 246, 246);
+}
+.whole{
+  width: 80vw;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  background-color: white;
+}
+form{
+  width: 30%;
+  height: 70%;
+  position: relative;
+  top: 8vh;
+  background-color: aqua;
+}
+.form-box{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(255, 255, 255);
+}
+.title{
+  margin-bottom: 7vh;
+  width: 100%;
+  font-size: 19px;
+  display: flex;
+  justify-content: center;
+}
+.form-box p{
+  color:  #777777;
+  font-size: 12px;
+  letter-spacing: -1.5px;
+  position: relative; 
+  bottom: 0.5vh;
+}
+input[type = "text"],input[type="password"] {
+  margin-bottom: 2vh;
+  width: 99%;
+  height: 8%;
+  border: none;
+  border-bottom: 2px solid rgb(246, 246, 246);
+}
+.text-btn{
+  margin-top: 1vh;
+  width: 100%;
+  text-align: center;
+}
+.same{
+  margin-bottom: 2vh;
+}
+.btn{
+  width: 100%;
+  height: 7vh;
+  color: white;
+  border: 1.5px solid red;
+  background-color: red;
+}
