@@ -163,6 +163,7 @@ input[type="checkbox"]:checked + label::before{
   position: relative;
   top: 1.5vh;
   background-color: #ff0000;
+  cursor: pointer;
 }
 .login-button input {
   color: white;
@@ -190,4 +191,5 @@ input[type="checkbox"]:checked + label::before{
   position: relative;
   top: 7vh;
   background-color: #ffffff;
+  cursor: pointer;
 }

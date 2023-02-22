@@ -116,4 +116,5 @@ input[type = "text"],input[type="password"] {
   color: white;
   border: 1.5px solid red;
   background-color: red;
+  cursor: pointer;
 }

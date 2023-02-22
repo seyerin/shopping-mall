@@ -1,18 +1,7 @@
 const bannerBox = document.querySelector(".banner-box");
 const bannerList = document.querySelector(".banner-list");
 const banners = document.querySelectorAll(".banner");
-let currentIndex = 0; 
-
-const category = document.querySelector(".category");
-const categoryBox = document.querySelector(".category-box");
-const REMOVECLASSNAME = "remove";
-
-category.addEventListener("click", removeBanner);
-
-function removeBanner (event){
-  bannerBox.classList.add(REMOVECLASSNAME);
-}
-
+let currentIndex = 0;
 //----------------------------------------------------------------/
 banners.forEach((banner) => {
   banner.style.width = `${bannerBox.clientWidth}px`; 

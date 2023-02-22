@@ -109,14 +109,17 @@ main{
 .share{
   margin-right: 1vw;
   width: 1.5vw;
+  cursor: pointer;
 }
 .heart{
   margin-right: 2vw;
   width: 1.4vw;
+  cursor: pointer;
 }
 .wish {
   margin-right: 2vw;
   width: 1.4vw;
+  cursor: pointer;
 }
 .product-name{
   margin: 10px 0 10px 0;
@@ -187,9 +190,11 @@ span{
 }
 .minus img{
   width: 1.8vw;
+  cursor: pointer;
 }
 .plus img{
   width: 1.58vw;
+  cursor: pointer;
 }
 .purchase{
   width: 20vw;
@@ -218,6 +223,7 @@ span{
   height: 6vh;
   font-size: 13px;
   font-weight: 900;
+  cursor: pointer;
 }
 .purchasing{
   color: white;

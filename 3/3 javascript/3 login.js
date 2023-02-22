@@ -26,7 +26,8 @@ function eneterEvent (event) {
 }
 else if (userId === null) {
   alert("없는 회원입니다.");
-  location.href = "/3/html/header/3 join.html";
+  userId.value = null;
+  userPw.value = null;
 }
 else{
   fail();
