@@ -15,19 +15,19 @@ const same = document.querySelector(".same");
 document.addEventListener("keydown", eneterEvent);
 
 function eneterEvent (event) {
-if (event.keyCode === 13) {
-  event.preventDefault();
-}
+  if (event.keyCode === 13) {
+    event.preventDefault();
+  }
   if (loginId.value === userId) {
-    available();
-    loginId.value = null;
-    loginPw.value = null;
-} 
-else {
-  loginPw.addEventListener("focus", joinMembership);
+      available();
+      loginId.value = null;
+      loginPw.value = null;
+    } 
+    else {
+      loginPw.addEventListener("focus", reconfirmPassword);
+    }
+  }
 
-}
-}
 function available (event) {
   alert("이미 가입된 회원입니다.");
   same.innerText = "이미 가입한 아이디입니다."
@@ -38,7 +38,7 @@ function available (event) {
 }
 
 
-function joinMembership(){
+function reconfirmPassword(){
   if(loginPw.value === reconfirmPw.value) {
     same.innerHTML = "비밀번호가 일치합니다.";
     same.style.color = "blue";
@@ -50,8 +50,8 @@ function joinMembership(){
     loginBtn.disabled = true;
   }
 }
-loginPw.onchange = joinMembership;
-reconfirmPw.onkeyup = joinMembership;
+loginPw.onchange = reconfirmPassword;
+reconfirmPw.onkeyup = reconfirmPassword;
 
 function saveLogin (event) {
   localStorage.setItem(SAVEUSERNAME, loginUserName.value);

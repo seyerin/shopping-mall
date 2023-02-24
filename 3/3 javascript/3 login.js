@@ -2,10 +2,10 @@ const loginForm = document.querySelector("form");
 const loginId = loginForm.querySelector(".id");
 const loginPw = loginForm.querySelector(".password");
 const loginBtn = loginForm.querySelector(".login-button");
-const saveUserId = "saveUserId";
-const saveUserpw = "saveUserPw";
-const userId = localStorage.getItem(saveUserId);
-const userPw = localStorage.getItem(saveUserpw);
+const SAVEUSERID = "saveUserId";
+const SAVEUSERPW = "saveUserPw";
+const userId = localStorage.getItem(SAVEUSERID);
+const userPw = localStorage.getItem(SAVEUSERPW);
 
 document.addEventListener("keydown", eneterEvent);
 
@@ -26,8 +26,8 @@ function eneterEvent (event) {
 }
 else if (userId === null) {
   alert("없는 회원입니다.");
-  userId.value = null;
-  userPw.value = null;
+  loginId.value = null;
+  loginPw.value = null;
 }
 else{
   fail();

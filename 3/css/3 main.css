@@ -49,6 +49,9 @@ header li{
   position: relative;
   right: 3.5vw;
 }
+.logout{
+  cursor: pointer;
+}
 /*-----------------------header 공통---------------------------------------*/
 main{
   width: 100%;
