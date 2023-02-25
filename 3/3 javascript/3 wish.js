@@ -1,7 +1,7 @@
 let names = localStorage.getItem("productName");
 let price = localStorage.getItem("productPrice");
 let img = localStorage.getItem("productImg");
-
+const wish = document.querySelector(".wish-list");
 
 
 let priceElement = document.createElement("p");
@@ -10,10 +10,16 @@ let nameElement = document.createElement("sub");
 let nameText = document.createTextNode(names);
 
 priceElement.appendChild(priceText);
-document.body.appendChild(priceElement);
+let priceLi = document.createElement("li");
+priceLi.appendChild(document.body.appendChild(priceElement));
+wish.appendChild(priceLi);
+
 
 nameElement.appendChild(nameText);
-document.body.appendChild(nameElement);
+let nameLi = document.createElement("li");
+nameLi.appendChild(document.body.appendChild(nameElement));
+wish.appendChild(nameLi);
+
 
 //-------------------------login/out-----------------------------
 const SAVEUSERID = "saveUserId";

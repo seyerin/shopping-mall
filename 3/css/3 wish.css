@@ -50,6 +50,15 @@ header li{
   right: 3.5vw;
 }
 /*-----------------------header 공통---------------------------------------*/
+main{
+  width: 100%;
+  height: 70vh;
+  position: relative;
+  top: 10vh;
+}
+li{
+  list-style: none;
+}
 .wish-list{
   margin: 10vw 0 0 10vw;
 }
