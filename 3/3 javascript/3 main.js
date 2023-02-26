@@ -65,7 +65,7 @@ const login = document.querySelector(".login");
 const ul =   document.querySelector(".head-ul");
 
 const logout = document.createElement("li")
-const createP = document.createElement("a")
+const createP = document.createElement("p")
 
 createP.innerText = "로그아웃";
 logout.appendChild(createP);
