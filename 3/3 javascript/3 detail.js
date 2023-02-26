@@ -53,8 +53,6 @@ function onWishButton (event) {
   let productPrice = document.querySelector(".price");
   let productName = document.querySelector(".product-name");
   let productImg = document.querySelector(".product-img");
-  console.log(productName);
-
   
   localStorage.setItem("productName", productName.innerText);
   localStorage.setItem("productPrice", productPrice.innerText);
@@ -68,6 +66,8 @@ function offWishButton (event) {
   heart.classList.remove(REMOVE);
   wishHeart.classList.remove(WISH);
   wishHeart.classList.add(REMOVE);
+  localStorage.removeItem(productName);
+  localStorage.removeItem(productPrice);
 }
 
 //-----------------------link copy----------------------

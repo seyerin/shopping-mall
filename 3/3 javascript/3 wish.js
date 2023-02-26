@@ -20,6 +20,16 @@ let nameLi = document.createElement("li");
 nameLi.appendChild(document.body.appendChild(nameElement));
 wish.appendChild(nameLi);
 
+const image = document.querySelector(".img");
+let src = 
+
+
+
+
+
+
+
+
 
 //-------------------------login/out-----------------------------
 const SAVEUSERID = "saveUserId";
@@ -56,3 +66,5 @@ function doLogout (event){
   localStorage.removeItem(SAVEUSERPW);
   window.location.reload();
 }
+
+
