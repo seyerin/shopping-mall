@@ -43,20 +43,22 @@ const wishHeart = document.querySelector(".full-heart");
 const REMOVE = "remove";
 const WISH = "wish";
 const wishBox = document.querySelector(".wish-list");
+let productPrice = document.querySelector(".price").innerText;
+let productName = document.querySelector(".product-name").innerText;
+let category = document.querySelector(".category").innerText;
+
 heart.addEventListener("click", onWishButton);
 
 function onWishButton (event) {
   heart.classList.add(REMOVE);
   wishHeart.classList.remove(REMOVE);
   wishHeart.classList.add(WISH);
-  let productPrice = document.querySelector(".price");
-  let productName = document.querySelector(".product-name");
-  let category = document.querySelector(".category");
-  localStorage.setItem(productName, productName.innerText);
-  localStorage.setItem(productPrice, productPrice.innerText);
-  localStorage.setItem(category, category.innerText);
-
+  localStorage.setItem(productName, productName);
+  localStorage.setItem(productPrice, productPrice);
+  localStorage.setItem(category, category);
 }
+
+console.log(productPrice);
 
 wishHeart.addEventListener("click", offWishButton);
 
