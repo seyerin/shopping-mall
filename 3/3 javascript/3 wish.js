@@ -1,6 +1,5 @@
 let names = localStorage.getItem("productName");
 let price = localStorage.getItem("productPrice");
-let img = localStorage.getItem("productImg");
 const wish = document.querySelector(".wish-list");
 
 
@@ -25,17 +24,10 @@ let src =
 
 
 
-
-
-
-
-
-
 //-------------------------login/out-----------------------------
 const SAVEUSERID = "saveUserId";
 const SAVEUSERPW = "saveUserPw";
 const SAVEUSERNAME = "saveUserName";
-const REMOVE = "remove";
 
 const userId = localStorage.getItem(SAVEUSERID);
 
@@ -66,5 +58,4 @@ function doLogout (event){
   localStorage.removeItem(SAVEUSERPW);
   window.location.reload();
 }
-
 
