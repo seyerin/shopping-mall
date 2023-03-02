@@ -20,7 +20,6 @@ nameLi.appendChild(document.body.appendChild(nameElement));
 wish.appendChild(nameLi);
 
 const image = document.querySelector(".img");
-let src = 
 
 
 
@@ -28,6 +27,7 @@ let src =
 const SAVEUSERID = "saveUserId";
 const SAVEUSERPW = "saveUserPw";
 const SAVEUSERNAME = "saveUserName";
+const REMOVE = "remove";
 
 const userId = localStorage.getItem(SAVEUSERID);
 
@@ -48,7 +48,7 @@ if(userId === null) {
 }
 else {
   logout.classList.remove(REMOVE);
-  login.classList.add("remove");
+  login.classList.add(REMOVE);
   logout.addEventListener("click", doLogout);
 }
 
@@ -58,4 +58,12 @@ function doLogout (event){
   localStorage.removeItem(SAVEUSERPW);
   window.location.reload();
 }
+//------------------------------change name-------------------------------------
+
+const userName = document.querySelector(".user-name");
+
+const createUserName = document.createElement("p");
+
+createUserName.innerText = "닉네임 : " + localStorage.getItem(SAVEUSERNAME);
+userName.appendChild(createUserName);
 
