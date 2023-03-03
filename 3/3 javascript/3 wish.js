@@ -1,5 +1,6 @@
 let names = localStorage.getItem("productName");
 let price = localStorage.getItem("productPrice");
+let img = localStorage.getItem("productImg");
 const wish = document.querySelector(".wish-list");
 
 
@@ -8,20 +9,21 @@ let priceText = document.createTextNode(price);
 let nameElement = document.createElement("sub");
 let nameText = document.createTextNode(names);
 
-priceElement.appendChild(priceText);
-let priceLi = document.createElement("li");
-priceLi.appendChild(document.body.appendChild(priceElement));
-wish.appendChild(priceLi);
-
-
 nameElement.appendChild(nameText);
 let nameLi = document.createElement("li");
 nameLi.appendChild(document.body.appendChild(nameElement));
 wish.appendChild(nameLi);
 
-const image = document.querySelector(".img");
+priceElement.appendChild(priceText);
+let priceLi = document.createElement("li");
+priceLi.appendChild(document.body.appendChild(priceElement));
+wish.appendChild(priceLi);
 
-
+let productImg = document.createElement("img");
+productImg.setAttribute("src", img);
+let imgLi = document.createElement("li");
+imgLi.appendChild(document.body.appendChild(productImg));
+wish.insertBefore(imgLi, wish.firstChild);
 
 //-------------------------login/out-----------------------------
 const SAVEUSERID = "saveUserId";
@@ -62,7 +64,7 @@ function doLogout (event){
 
 const userName = document.querySelector(".user-name");
 
-const createUserName = document.createElement("p");
+const createUserName = document.createElement("h3");
 
 createUserName.innerText = "닉네임 : " + localStorage.getItem(SAVEUSERNAME);
 userName.appendChild(createUserName);

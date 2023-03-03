@@ -50,7 +50,7 @@ const PRODUCTNAME = "productName";
 const PRODUCTPRICE = "productPrice";
 const CATEGORY = "category";
 const PRODUCTIMG = "productImg";
-const productImg = document.querySelector(".product-img");
+const productImg = document.querySelector(".product-img").src;
 
 heart.addEventListener("click", onWishButton);
 
@@ -61,10 +61,8 @@ function onWishButton (event) {
   localStorage.setItem(PRODUCTNAME, productName.innerText);
   localStorage.setItem(PRODUCTPRICE, productPrice.innerText);
   localStorage.setItem(CATEGORY, category.innerText);
-  localStorage.setItem(PRODUCTIMG, productImg.innerText);
+  localStorage.setItem(PRODUCTIMG, productImg);
 }
-
-console.log(productName.innerText);
 
 wishHeart.addEventListener("click", offWishButton);
 
