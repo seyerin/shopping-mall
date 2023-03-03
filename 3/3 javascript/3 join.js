@@ -43,8 +43,10 @@ function reconfirmPassword(){
     same.innerHTML = "비밀번호가 일치합니다.";
     same.style.color = "blue";
     loginBtn.disabled = false;
-  } else {
+    loginBtn.addEventListener("click", goToMain);
+    // 회원가입 후 로그인 버튼을 눌렀을 때 바로 메인 페이지로 가게 하고 싶음 어캐함
     loginForm.addEventListener("submit", saveLogin);
+  } else {
     same.innerHTML = "비밀번호가 일치하지 않습니다";
     same.style.color = "red";
     loginBtn.disabled = true;
@@ -53,8 +55,13 @@ function reconfirmPassword(){
 loginPw.onchange = reconfirmPassword;
 reconfirmPw.onkeyup = reconfirmPassword;
 
+
 function saveLogin (event) {
   localStorage.setItem(SAVEUSERNAME, loginUserName.value);
   localStorage.setItem(SAVEUSERID, loginId.value);
   localStorage.setItem(SAVEUSERPW, loginPw.value);
+}
+
+function goToMain (event) {
+  location.href = "/3/html/main/index.html";
 }

@@ -57,9 +57,10 @@ let interval = getInterval();
 const SAVEUSERID = "saveUserId";
 const SAVEUSERPW = "saveUserPw";
 const SAVEUSERNAME = "saveUserName";
+const ONLOGIN = "onLogin";
 const REMOVE = "remove";
 
-const userId = localStorage.getItem(SAVEUSERID);
+const userId = localStorage.getItem(ONLOGIN);
 
 const login = document.querySelector(".login");
 const ul =   document.querySelector(".head-ul");
@@ -86,5 +87,6 @@ function doLogout (event){
   localStorage.removeItem(SAVEUSERNAME);
   localStorage.removeItem(SAVEUSERID);
   localStorage.removeItem(SAVEUSERPW);
+  localStorage.removeItem(ONLOGIN);
   window.location.reload();
 }

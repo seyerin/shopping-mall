@@ -2,15 +2,16 @@
 const SAVEUSERID = "saveUserId";
 const SAVEUSERPW = "saveUserPw";
 const SAVEUSERNAME = "saveUserName";
+const ONLOGIN = "onLogin";
 const REMOVE = "remove";
 
-const userId = localStorage.getItem(SAVEUSERID);
+const userId = localStorage.getItem(ONLOGIN);
 
 const login = document.querySelector(".login");
-const ul = document.querySelector(".head-ul");
+const ul =   document.querySelector(".head-ul");
 
 const logout = document.createElement("li")
-const createP = document.createElement("a")
+const createP = document.createElement("p")
 
 createP.innerText = "로그아웃";
 logout.appendChild(createP);
@@ -23,7 +24,7 @@ if(userId === null) {
 }
 else {
   logout.classList.remove(REMOVE);
-  login.classList.add(REMOVE);
+  login.classList.add("remove");
   logout.addEventListener("click", doLogout);
 }
 
@@ -31,7 +32,6 @@ function doLogout (event){
   localStorage.removeItem(SAVEUSERNAME);
   localStorage.removeItem(SAVEUSERID);
   localStorage.removeItem(SAVEUSERPW);
+  localStorage.removeItem(ONLOGIN);
   window.location.reload();
 }
-
-console.log(document.querySelector(".head-ul"));

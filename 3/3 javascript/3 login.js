@@ -38,6 +38,7 @@ else{
 
 function success (event) {
   location.href = "/3/html/main/index.html";
+  localStorage.setItem("onLogin", loginId.value);
 }
 
 function fail (event) {
