@@ -58,7 +58,7 @@ main{
   height: 100%;
   position: relative;
   top: 10vh;
-  background-color: rgb(131, 17, 17);
+  background-color: rgb(246, 246, 246);
 }
 .whole{
   width: 80vw;
@@ -67,14 +67,35 @@ main{
   left: 10vw;
   background-color: white;
 }
-main img {
-  width: 13vw;
+.my-title{
+  margin: 0 0 4vh 2vw;
+  font-size: 40px;
+  position: relative;
+  top: 5vh;
+}
+.name{
+  margin: 0 0 0 2vw;
+}
+.change-name{
+  width: 5vw;
+  height: 3.5vh;
+  color:  white;
+  border: none;
+  position: relative;
+  left: 13vw;
+  bottom: 3.3vh;
+  background-color: red;
+  cursor: pointer;
+}
+.name-box{
+  position: relative;
+  top:1.5vh;
+    left: 1.8vw;
 }
 .inpo{
   width: 100%;
   height: 40vh;
   position: relative;
-  background-color: blueviolet;
 }
 .user-name{
   position: relative;
@@ -84,8 +105,21 @@ main img {
   width: 100%;
   height: 50vh;
   position: relative;
-  top: 27vh;
-  background-color: aqua;
+  top: 21vh;
+}
+.wish-title::after{
+  content: "";
+  width: 75vw;
+  height: 50%;
+  display: block;
+  border-top: 2px solid rgb(255, 201, 201);
+  position: relative;
+  left: 0.5vw;
+  bottom: 8vh;
+}
+
+main img {
+  width: 13vw;
 }
 .wish-title{
   margin: 0 0 6vh 2vw;
@@ -94,4 +128,5 @@ main img {
 }
 .wish-list{
   margin: 0 0 0 1vw;
+  font-weight: 900;
 }

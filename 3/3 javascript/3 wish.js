@@ -25,6 +25,8 @@ let imgLi = document.createElement("li");
 imgLi.appendChild(document.body.appendChild(productImg));
 wish.insertBefore(imgLi, wish.firstChild);
 
+
+
 //-------------------------login/out-----------------------------
 const SAVEUSERID = "saveUserId";
 const SAVEUSERPW = "saveUserPw";
@@ -56,9 +58,6 @@ else {
 }
 
 function doLogout (event){
-  localStorage.removeItem(SAVEUSERNAME);
-  localStorage.removeItem(SAVEUSERID);
-  localStorage.removeItem(SAVEUSERPW);
   localStorage.removeItem(ONLOGIN);
   window.location.reload();
 }
@@ -66,23 +65,24 @@ function doLogout (event){
 
 const userName = document.querySelector(".user-name");
 const nameChange = document.querySelector(".change-name");
+const nameBox = document.querySelector(".name-box");
 
 const createUserName = document.createElement("h3");
 
 createUserName.innerText = "닉네임 : " + localStorage.getItem(SAVEUSERNAME);
 userName.insertBefore(createUserName, userName.firstChild);
+createUserName.classList.add("name");
 
 nameChange.addEventListener("click", changeName);
 
 function changeName(event) {
-    let name = prompt("변경 할 닉네임을 입력 해주세요.");
-    createUserName.innerText = "닉네임 : " + name;
-    localStorage.setItem(SAVEUSERNAME, name);
+  nameBox.classList.remove(REMOVE);
+    localStorage.setItem(SAVEUSERNAME, nameBox);
 }
 
 //--------------------------------my page in--------------------------------------//
 
-if (localStorage.getItem(SAVEUSERID)) {
+if (localStorage.getItem(ONLOGIN)) {
 
 } else {
   alert("로그인이 필요한 서비스 입니다.")

@@ -123,9 +123,6 @@ else {
 }
 
 function doLogout (event){
-  localStorage.removeItem(SAVEUSERNAME);
-  localStorage.removeItem(SAVEUSERID);
-  localStorage.removeItem(SAVEUSERPW);
   localStorage.removeItem(ONLOGIN);
   window.location.reload();
 }

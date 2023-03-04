@@ -80,15 +80,15 @@ main{
 .category-best::after{
   margin: 15px 0 15px 10px;
   content: "";
-  display: block;
   width: 12vw;
+  display: block;
   border-bottom: 3px solid rgb(246, 246, 246);
 }
 .category-box li::after{
   margin: 15px 0 15px 10px;
   content: "";
-  display: block;
   width: 12vw;
+  display: block;
   border-bottom: 2px solid rgb(246, 246, 246);
 }
 .category-box li{
