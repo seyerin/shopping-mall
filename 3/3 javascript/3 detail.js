@@ -55,14 +55,19 @@ const productImg = document.querySelector(".product-img").src;
 heart.addEventListener("click", onWishButton);
 
 function onWishButton (event) {
-  heart.classList.add(REMOVE);
-  wishHeart.classList.remove(REMOVE);
-  wishHeart.classList.add(WISH);
-  localStorage.setItem(PRODUCTNAME, productName.innerText);
-  localStorage.setItem(PRODUCTPRICE, productPrice.innerText);
-  localStorage.setItem(CATEGORY, category.innerText);
-  localStorage.setItem(PRODUCTIMG, productImg);
-}
+  if (localStorage.getItem(ONLOGIN) !== null) {
+    heart.classList.add(REMOVE);
+    wishHeart.classList.remove(REMOVE);
+    wishHeart.classList.add(WISH);
+
+    localStorage.setItem(PRODUCTNAME, productName.innerText);
+    localStorage.setItem(PRODUCTPRICE, productPrice.innerText);
+    localStorage.setItem(CATEGORY, category.innerText);
+    localStorage.setItem(PRODUCTIMG, productImg);
+  } else {
+    alert("로그인이 필요한 서비스 입니다.")
+    location.href = "/3/html/header/3 login.html";
+  }
 
 wishHeart.addEventListener("click", offWishButton);
 
@@ -70,11 +75,14 @@ function offWishButton (event) {
   heart.classList.remove(REMOVE);
   wishHeart.classList.remove(WISH);
   wishHeart.classList.add(REMOVE);
-  localStorage.removeItem(productName);
-  localStorage.removeItem(productPrice);
-  localStorage.removeItem(category);
-}
 
+  localStorage.removeItem(PRODUCTNAME);
+  localStorage.removeItem(PRODUCTPRICE);
+  localStorage.removeItem(CATEGORY);
+  localStorage.removeItem(PRODUCTIMG);
+    }
+
+console.log(localStorage.getItem(PRODUCTNAME));
 //-----------------------link copy----------------------
 const copyButton = document.querySelector(".share");
 

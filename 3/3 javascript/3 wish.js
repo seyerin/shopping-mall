@@ -25,7 +25,7 @@ let imgLi = document.createElement("li");
 imgLi.appendChild(document.body.appendChild(productImg));
 wish.insertBefore(imgLi, wish.firstChild);
 
-
+console.log(productImg);
 
 //-------------------------login/out-----------------------------
 const SAVEUSERID = "saveUserId";
