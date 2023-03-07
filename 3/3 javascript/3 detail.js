@@ -48,41 +48,44 @@ let productName = document.querySelector(".product-name");
 let category = document.querySelector(".category");
 const PRODUCTNAME = "productName";
 const PRODUCTPRICE = "productPrice";
-const CATEGORY = "category";
 const PRODUCTIMG = "productImg";
 const productImg = document.querySelector(".product-img").src;
+const ONLOGIN = "onLogin";
 
-heart.addEventListener("click", onWishButton);
+if (localStorage.getItem(ONLOGIN) !== null) {
+  heart.addEventListener("click", onWishList);
+}
+else {
+  alert("로그인이 필요한 서비싑니다.")
+  location.href = "/3/html/header/3 login.html";
+}
 
-function onWishButton (event) {
-  if (localStorage.getItem(ONLOGIN) !== null) {
+function onWishList () {
+  localStorage.setItem(PRODUCTNAME, productName.innerText);
+  localStorage.setItem(PRODUCTPRICE, productPrice.innerText);
+  localStorage.setItem(PRODUCTIMG, productImg);
+
+  if (localStorage.getItem(PRODUCTNAME) === productName.innerText) {
     heart.classList.add(REMOVE);
     wishHeart.classList.remove(REMOVE);
     wishHeart.classList.add(WISH);
 
-    localStorage.setItem(PRODUCTNAME, productName.innerText);
-    localStorage.setItem(PRODUCTPRICE, productPrice.innerText);
-    localStorage.setItem(CATEGORY, category.innerText);
-    localStorage.setItem(PRODUCTIMG, productImg);
-  } else {
-    alert("로그인이 필요한 서비스 입니다.")
-    location.href = "/3/html/header/3 login.html";
   }
-
-wishHeart.addEventListener("click", offWishButton);
-
-function offWishButton (event) {
-  heart.classList.remove(REMOVE);
-  wishHeart.classList.remove(WISH);
-  wishHeart.classList.add(REMOVE);
-
+}
+  wishHeart.addEventListener("click", offWishList);
+function offWishList (event) {
+  localStorage.removeItem(PRODUCTIMG);
   localStorage.removeItem(PRODUCTNAME);
   localStorage.removeItem(PRODUCTPRICE);
-  localStorage.removeItem(CATEGORY);
-  localStorage.removeItem(PRODUCTIMG);
-    }
+  
+    if (localStorage.getItem(PRODUCTNAME) === null ) {
+    heart.classList.remove(REMOVE);
+    wishHeart.classList.add(REMOVE);
+    wishHeart.classList.remove(WISH);
+  }
+  }
 
-console.log(localStorage.getItem(PRODUCTNAME));
+  console.log(localStorage.getItem(PRODUCTNAME) === productName.innerText);
 //-----------------------link copy----------------------
 const copyButton = document.querySelector(".share");
 
@@ -105,7 +108,6 @@ function copy (event) {
 const SAVEUSERID = "saveUserId";
 const SAVEUSERPW = "saveUserPw";
 const SAVEUSERNAME = "saveUserName";
-const ONLOGIN = "onLogin";
 
 const userId = localStorage.getItem(ONLOGIN);
 
