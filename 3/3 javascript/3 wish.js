@@ -66,6 +66,7 @@ function doLogout (event){
 const userName = document.querySelector(".user-name");
 const nameChange = document.querySelector(".change-name");
 const nameBox = document.querySelector(".name-box");
+const submit = document.querySelector(".submit-button");
 
 const createUserName = document.createElement("h3");
 
@@ -77,13 +78,18 @@ nameChange.addEventListener("click", changeName);
 
 function changeName(event) {
   nameBox.classList.remove(REMOVE);
-    localStorage.setItem(SAVEUSERNAME, nameBox.value); 
-  nameChange.addEventListener("click", change);
+  submit.classList.remove(REMOVE);
+  nameChange.classList.add(REMOVE);
+  //nameBox.value = "";
+  localStorage.setItem(SAVEUSERNAME, nameBox.value); 
+  submit.addEventListener("click", change);
 }
 
 function change(event) {
   createUserName.innerText = "닉네임 : " + localStorage.getItem(SAVEUSERNAME);
   nameBox.classList.add(REMOVE);
+  submit.classList.add(REMOVE);
+  nameChange.classList.remove(REMOVE);
 }
 
 //--------------------------------my page in--------------------------------------//
