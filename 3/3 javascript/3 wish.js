@@ -80,12 +80,12 @@ function changeName(event) {
   nameBox.classList.remove(REMOVE);
   submit.classList.remove(REMOVE);
   nameChange.classList.add(REMOVE);
-  //nameBox.value = "";
-  localStorage.setItem(SAVEUSERNAME, nameBox.value); 
+  //nameBox.value = ""; 
   submit.addEventListener("click", change);
 }
 
 function change(event) {
+  localStorage.setItem(SAVEUSERNAME, nameBox.value);
   createUserName.innerText = "닉네임 : " + localStorage.getItem(SAVEUSERNAME);
   nameBox.classList.add(REMOVE);
   submit.classList.add(REMOVE);
