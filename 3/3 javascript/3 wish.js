@@ -73,8 +73,7 @@ createUserName.innerText = "닉네임 : " + localStorage.getItem(SAVEUSERNAME);
 userName.insertBefore(createUserName, userName.firstChild);
 createUserName.classList.add("name");
 
-  nameChange.addEventListener("click", changeName);
-
+nameChange.addEventListener("click", changeName);
 
 function changeName(event) {
   nameBox.classList.remove(REMOVE);
@@ -86,7 +85,6 @@ function change(event) {
   createUserName.innerText = "닉네임 : " + localStorage.getItem(SAVEUSERNAME);
   nameBox.classList.add(REMOVE);
 }
-
 
 //--------------------------------my page in--------------------------------------//
 

@@ -50,7 +50,7 @@ function reconfirmPassword(){
     
     // 회원가입 후 로그인 버튼을 눌렀을 때 바로 메인 페이지로 가게 하고 싶음 어캐함
     loginForm.addEventListener("submit", saveLogin);
-    location.href = "/3/html/header/3 login.html";
+    goToLogin();
   }
 }
 loginPw.onchange = reconfirmPassword;
@@ -61,4 +61,10 @@ function saveLogin (event) {
   localStorage.setItem(SAVEUSERNAME, loginUserName.value);
   localStorage.setItem(SAVEUSERID, loginId.value);
   localStorage.setItem(SAVEUSERPW, loginPw.value);
+}
+
+function goToLogin () {
+  if(localStorage.getItem(SAVEUSERID) !== null) {
+    location.href = "/3/html/header/3 login.html";
+  }
 }

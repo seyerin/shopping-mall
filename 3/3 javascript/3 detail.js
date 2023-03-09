@@ -64,15 +64,15 @@ function onWishList () {
   localStorage.setItem(PRODUCTNAME, productName.innerText);
   localStorage.setItem(PRODUCTPRICE, productPrice.innerText);
   localStorage.setItem(PRODUCTIMG, productImg);
-
-  if (localStorage.getItem(PRODUCTNAME) === productName.innerText) {
-    heart.classList.add(REMOVE);
-    wishHeart.classList.remove(REMOVE);
-    wishHeart.classList.add(WISH);
-
-  }
 }
-  wishHeart.addEventListener("click", offWishList);
+
+if(localStorage.getItem(PRODUCTNAME) !== null) {
+  heart.classList.add(REMOVE);
+  wishHeart.classList.remove(REMOVE);
+  wishHeart.classList.add(WISH);
+}
+
+wishHeart.addEventListener("click", offWishList);
 function offWishList (event) {
   localStorage.removeItem(PRODUCTIMG);
   localStorage.removeItem(PRODUCTNAME);
@@ -83,9 +83,8 @@ function offWishList (event) {
     wishHeart.classList.add(REMOVE);
     wishHeart.classList.remove(WISH);
   }
-  }
+}
 
-  console.log(localStorage.getItem(PRODUCTNAME) === productName.innerText);
 //-----------------------link copy----------------------
 const copyButton = document.querySelector(".share");
 
