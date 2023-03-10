@@ -67,3 +67,22 @@ main {
   left: 10vw;
   background-color: white;
 }
+.product-box {
+  width: 30vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: aqua;
+}
+main img {
+  width: 25vw;
+}
+.wish-title {
+  margin: 0 0 6vh 2vw;
+  position: relative;
+  top: 2.5vh;
+}
+.wish-list {
+  margin: 0 0 0 1vw;
+  font-weight: 900;
+}

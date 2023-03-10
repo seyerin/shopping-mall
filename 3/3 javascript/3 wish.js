@@ -80,7 +80,7 @@ function changeName(event) {
   nameBox.classList.remove(REMOVE);
   submit.classList.remove(REMOVE);
   nameChange.classList.add(REMOVE);
-  //nameBox.value = ""; 
+  nameBox.value = ""; 
   submit.addEventListener("click", change);
 }
 

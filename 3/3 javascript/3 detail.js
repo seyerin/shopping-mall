@@ -60,7 +60,7 @@ else {
   location.href = "/3/html/header/3 login.html";
 }
 
-function onWishList () {
+function onWishList (event) {
   localStorage.setItem(PRODUCTNAME, productName.innerText);
   localStorage.setItem(PRODUCTPRICE, productPrice.innerText);
   localStorage.setItem(PRODUCTIMG, productImg);
@@ -134,4 +134,15 @@ else {
 function doLogout (event){
   localStorage.removeItem(ONLOGIN);
   window.location.reload();
+}
+//--------------------------------cart----------------------------------------------
+
+const cartButton = document.querySelector(".cart-button");
+
+cartButton.addEventListener("click", addCart);
+
+function addCart (event) {
+  localStorage.setItem(PRODUCTNAME, productName.innerText);
+  localStorage.setItem(PRODUCTPRICE, productPrice.innerText);
+  localStorage.setItem(PRODUCTIMG, productImg);
 }
