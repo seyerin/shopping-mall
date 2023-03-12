@@ -15,7 +15,14 @@ nameElement.appendChild(nameText);
 
 let productLi = document.createElement("li");
 let productDiv = document.createElement("div");
+let removeDiv = document.createElement("div")
+let removeButton = document.createElement("p")
 
+removeButton.innerText = "x";
+removeDiv.appendChild(removeButton);
+removeDiv.classList.add("remove-button");
+
+productDiv.appendChild(removeDiv);
 productDiv.appendChild(document.body.appendChild(productImg));
 productDiv.appendChild(priceElement);
 productDiv.appendChild(nameElement)
@@ -25,6 +32,7 @@ productDiv.classList.add("product-box");
 productLi.appendChild(productDiv);
 
 cart.appendChild(productLi);
+
 
 
 //-----------------------login/out---------------------------

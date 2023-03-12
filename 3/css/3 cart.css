@@ -74,12 +74,20 @@ main {
 }
 .product-box {
   width: 20vw;
+  border: 4px solid rgb(246, 246, 246);
   display: flex;
   flex-direction: column;
   align-items: center;
   position: relative;
   top: 12vh;
-  background-color: aqua;
+}
+.remove-button {
+  display: inline;
+  font-size: 25px;
+  font-weight: 700;
+  position: relative;
+  left: 8.5vw;
+  bottom: 0.5vh;
 }
 main img {
   width: 15vw;
