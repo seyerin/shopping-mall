@@ -142,6 +142,7 @@ const cartButton = document.querySelector(".cart-button");
 cartButton.addEventListener("click", addCart);
 
 function addCart (event) {
+  localStorage.setItem("cart", "inCart");
   localStorage.setItem(PRODUCTNAME, productName.innerText);
   localStorage.setItem(PRODUCTPRICE, productPrice.innerText);
   localStorage.setItem(PRODUCTIMG, productImg);

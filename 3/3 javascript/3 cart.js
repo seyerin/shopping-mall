@@ -2,7 +2,10 @@ let names = localStorage.getItem("productName");
 let price = localStorage.getItem("productPrice");
 let img = localStorage.getItem("productImg");
 const cart = document.querySelector(".cart-list");
-
+const PRODUCTNAME = "productName";
+const PRODUCTPRICE = "productPrice";
+const PRODUCTIMG = "productImg";
+const PRODUVTIMG = "productImg"; 
 
 let priceElement = document.createElement("p");
 let priceText = document.createTextNode(price);
@@ -18,21 +21,33 @@ let productDiv = document.createElement("div");
 let removeDiv = document.createElement("div")
 let removeButton = document.createElement("p")
 
-removeButton.innerText = "x";
-removeDiv.appendChild(removeButton);
-removeDiv.classList.add("remove-button");
 
-productDiv.appendChild(removeDiv);
-productDiv.appendChild(document.body.appendChild(productImg));
-productDiv.appendChild(priceElement);
-productDiv.appendChild(nameElement)
+if(localStorage.getItem("cart") !== null) {
+  productDiv.appendChild(document.body.appendChild(productImg));
+  productDiv.appendChild(priceElement);
+  productDiv.appendChild(nameElement)
+  
+  productDiv.classList.add("product-box");
+  
+  productLi.appendChild(productDiv);
+  
+  cart.appendChild(productLi);
 
-productDiv.classList.add("product-box");
+  if (localStorage.getItem(PRODUCTNAME) !== null) {
+    removeButton.innerText = "x";
+    removeDiv.appendChild(removeButton);
+    removeDiv.classList.add("remove-button");
+    productDiv.appendChild(removeDiv);
+  }
+}
 
-productLi.appendChild(productDiv);
 
-cart.appendChild(productLi);
+removeButton.addEventListener("click", removeWish);
 
+function removeWish (event) {
+  localStorage.removeItem("cart");
+  location.reload();
+}
 
 
 //-----------------------login/out---------------------------
